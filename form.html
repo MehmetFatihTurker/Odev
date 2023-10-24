@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .square-radio {
+        appearance: none;
+        border: 2px solid rgb(15, 15, 15);
+        border-radius: 2px;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .square-radio:checked {
+        content: "\2713";
+        display: block;
+        font-size: 8px;
+        text-align: top;
+        line-height: 8px;
+        color: rgb(255, 255, 255);
+        background-color: blue;
+      }
+      .product-selection {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .product {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+      }
+      .tr,
+      td {
+        margin-right: 5000px;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Identifying Informations</legend>
+      <table>
+        <tr>
+          <td><label for="firstName">First Name:</label></td>
+          <td><input type="text" id="firstName" name="firstName" /></td>
+          <td><label for="lastName">Last Name:</label></td>
+          <td><input type="text" id="lastName" name="lastName" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">E-mail:</label></td>
+          <td><input type="email" id="email" name="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="streetAdress">Street Adress:</label></td>
+          <td><input type="text" id="streetAdress" name="streetAdress" /></td>
+          <td><label for="city">City:</label></td>
+          <td><input type="text" id="city" name="city" /></td>
+          <td><label for="state">State:</label></td>
+          <td><input type="text" id="state" name="state" /></td>
+          <td><label for="zipcode">Zipcode:</label></td>
+          <td><input type="text" id="zipcode" name="zipcode" /></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Selections</legend>
+      <form action="">
+        <h2>Color Selection</h2>
+        <input type="radio" id="red" name="color" />
+        <label for="red">Red</label>
+        <input type="radio" id="blue" name="color" />
+        <label for="blue">Blue</label>
+        <input type="radio" id="green" name="color" />
+        <label for="green">Green</label>
+        <input type="radio" id="white" name="color" />
+        <label for="white">White</label>
+        <input type="radio" id="black" name="color" />
+        <label for="black">Black</label>
+        <h2>Product Selection</h2>
+        <div class="product-selection">
+          <div class="product">
+            <label for="rug">Rug</label>
+            <input type="radio" class="square-radio" id="rug" name="rug" />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              name="amountRug"
+              id="amountRug"
+              min="0"
+              max="20"
+              step="1"
+            />
+          </div>
+          <div class="product">
+            <label for="sweater">Sweater</label>
+            <input
+              type="radio"
+              class="square-radio"
+              id="sweater"
+              name="sweater"
+            />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              name="amountSweater"
+              id="amountSweater"
+              min="0"
+              max="20"
+              step="1"
+            />
+          </div>
+          <div class="product">
+            <label for="curtain">Curtain</label>
+            <input
+              type="radio"
+              class="square-radio"
+              id="curtain"
+              name="curtain"
+            />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              name="amountCurtain"
+              id="amountCurtain"
+              min="0"
+              max="20"
+              step="1"
+            />
+          </div>
+          <div class="product">
+            <label for="towel">Towel</label>
+            <input type="radio" class="square-radio" id="towel" name="towel" />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              name="amountTowel"
+              id="amountTowel"
+              min="0"
+              max="20"
+              step="1"
+            />
+          </div>
+        </div>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>Shipping Selection</legend>
+      <label for="city">Select type of shipping</label>
+      <select name="city" id="city">
+        <option value="06" selected>One Day Shipping</option>
+        <option value="34">xyz</option>
+        <option value="35">asd</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Submit your order</legend>
+      <textarea
+        name="adres"
+        id="adress"
+        placeholder="Enter any special instructions"
+        cols="40"
+        rows="20"
+        maxlength="500"
+      ></textarea>
+      <br />
+      <button type="submit">Submit</button>
+    </fieldset>
+  </body>
+</html>
